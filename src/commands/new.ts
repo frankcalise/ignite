@@ -92,13 +92,13 @@ export default {
     igniteHeading()
     p(` █ Creating ${magenta(projectName)} using ${red("Ignite")} ${meta.version()}`)
     p(` █ Powered by ${red("Infinite Red")} - https://infinite.red`)
-    p(` █ Using ${cyan(expo ? `expo-cli@${deps.expo}` : "ignite-cli")} with ${green(packagerName)}`)
+    p(` █ Using ${cyan(expo ? `create-expo-app` : "ignite-cli")} with ${green(packagerName)}`)
     p(` █ Bundle identifier: ${magenta(bundleIdentifier)}`)
     p(` █ Path: ${gray(path(process.cwd(), projectName))}`)
     p(` ────────────────────────────────────────────────\n`)
 
     if (expo) {
-      const expoCLIString = `npx expo-cli@${deps.expo} init ${projectName} --template ${boilerplatePath} --non-interactive`
+      const expoCLIString = `npx create-expo-app ${projectName} --template ${boilerplatePath}`
       log({ expoCLIString })
 
       // generate the project
